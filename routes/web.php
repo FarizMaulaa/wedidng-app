@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Home;
+use App\Livewire\Deskripsi;
+use App\Livewire\Listgedung;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +17,12 @@ use App\Livewire\Home;
 |
 */
 
-Route::get('/', function () {
+Route::get('/hds', function () {
     return view('welcome');
 });
 
-Route::get('/home', Home::class);
+Route::get('/', Home::class);
+
+Route::get('/deskripsi', Deskripsi::class);
+
+Route::get('/listgedung', Listgedung::class);
